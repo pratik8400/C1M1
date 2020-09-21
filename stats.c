@@ -39,9 +39,9 @@ int main(void) {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-	print_array(test);
+	
 	print_statistics(test);
-  	
+  	print_array(test);
   		
   	return 0;
 
@@ -50,9 +50,9 @@ int main(void) {
 // main function that doesn't receive any parameter and 
 // returns integer a median value. 
 
-/* This function prints out the array */
+/* This function prints out the sorted array */
 int print_array(int test[]){
-    printf("The given Array is\n");
+    printf("The sorted Array is\n");
     int i;
     for(i=0;i<SIZE;i++){
       printf("%d\t", test[i]);
@@ -61,6 +61,7 @@ int print_array(int test[]){
     return 0;
 }
 
+/* This function is used for swap elements */
 void swaping_elements(int *c, int *d){
 	int temp;
 	temp = *c;
@@ -68,7 +69,7 @@ void swaping_elements(int *c, int *d){
 	*d = temp;
 }
 
-
+/* This function is used for sorting of array(bubble sort) */
 void sorting_of_array(int test[],int n) { 
    int i,j,temp;
 
@@ -79,6 +80,7 @@ void sorting_of_array(int test[],int n) {
       }
    }
 }
+/* This function will calculate the median from an array */
 int find_median(int test[]) 
 { 
    int median = SIZE;  
@@ -89,6 +91,7 @@ int find_median(int test[])
     return 0; 
 } 
 
+/* This function will calculate the mean from an array */
 int find_mean(int test[]){
 	int sum, i;
 	sum = 0;
@@ -96,23 +99,25 @@ int find_mean(int test[]){
 {
 		sum += test[i];
 }
-	printf("The mean is %f\n", sum/(float)SIZE);	
+	printf("The mean is %d\n", sum/=SIZE);	
 	return(0);
 }
-	
+/* This function will calculate the max from an array */	
 int find_maximum(int test[]){
 	
 	sorting_of_array(test, SIZE);
 	printf("The maximum element is %d\n", test[SIZE-1]);
 	return 0;
 }
+
+/* This function will calculate the minimum from an array */
 int find_minimum(int test[]){
 	
 	sorting_of_array(test, SIZE);
 	printf("The minimum element is %d\n", test[0]);
 	return 0;
 }
-
+/* This function will print statistics of an array */
 int print_statistics(int test[]){
 	
 	printf("The statistics of the given array is\n");
