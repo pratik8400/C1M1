@@ -39,11 +39,10 @@ int main(void) {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-
-  	print_array(test);
-  	find_median(test);
-	find_mean(test);
-	
+	print_array(test);
+	print_statistics(test);
+  	
+  		
   	return 0;
 
 }
@@ -53,11 +52,12 @@ int main(void) {
 
 /* This function prints out the array */
 int print_array(int test[]){
-    printf("The Array is\n");
+    printf("The given Array is\n");
     int i;
     for(i=0;i<SIZE;i++){
       printf("%d\t", test[i]);
 }
+    printf("\n");
     return 0;
 }
 
@@ -85,7 +85,7 @@ int find_median(int test[])
 
    sorting_of_array(test, SIZE);
    median = ((median + 1)/2) -1;
-   printf("\nMedian is %d\n", test[median]);
+   printf("Median is %d\n", test[median]);
     return 0; 
 } 
 
@@ -96,6 +96,29 @@ int find_mean(int test[]){
 {
 		sum += test[i];
 }
-	printf("\nThe mean is %f\n", sum/(float)SIZE);	
+	printf("The mean is %f\n", sum/(float)SIZE);	
 	return(0);
+}
+	
+int find_maximum(int test[]){
+	
+	sorting_of_array(test, SIZE);
+	printf("The maximum element is %d\n", test[SIZE-1]);
+	return 0;
+}
+int find_minimum(int test[]){
+	
+	sorting_of_array(test, SIZE);
+	printf("The minimum element is %d\n", test[0]);
+	return 0;
+}
+
+int print_statistics(int test[]){
+	
+	printf("The statistics of the given array is\n");
+	find_median(test);
+	find_mean(test);
+	find_minimum(test);
+	find_maximum(test);
+	return 0;
 }
