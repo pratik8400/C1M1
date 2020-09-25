@@ -29,7 +29,7 @@
 
 
 
-int main(void) {
+void main(void) {
 
   	int test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                       114, 88,   45,  76, 123,  87,  25,  23,
@@ -43,7 +43,6 @@ int main(void) {
 	print_statistics(test);
   	print_array(test);
   		
-  	return 0;
 
 }
 /* Add other Implementation File Code Here */
@@ -52,7 +51,7 @@ int main(void) {
 
 /* This function prints out the sorted array */
 int print_array(int test[]){
-    printf("The sorted Array is\n");
+    printf("The sorted Array (largest to smallest) is\n");
     int i;
     for(i=0;i<SIZE;i++){
       printf("%d\t", test[i]);
@@ -75,7 +74,7 @@ void sorting_of_array(int test[],int n) {
 
    for(i = 0;i < n-1;i++) {
       for(j = 0;j < n-i-1;j++) {
-         if(test[j] > test[j+1])
+         if(test[j] < test[j+1])
             swaping_elements(&test[j],&test[j+1]);
       }
    }

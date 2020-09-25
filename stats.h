@@ -22,7 +22,8 @@
 #define __STATS_H__
 
 /* Add Your Declarations and Function Comments here */ 
-
+int print_array(int test[]);
+int print_statistics(int test[]);
 /**
  * @brief <Add Brief Description of Function Here>
  *
