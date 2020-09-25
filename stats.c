@@ -105,7 +105,7 @@ int find_mean(int test[]){
 int find_maximum(int test[]){
 	
 	sorting_of_array(test, SIZE);
-	printf("The maximum element is %d\n", test[SIZE-1]);
+	printf("The maximum element is %d\n", test[0]);
 	return 0;
 }
 
@@ -113,7 +113,7 @@ int find_maximum(int test[]){
 int find_minimum(int test[]){
 	
 	sorting_of_array(test, SIZE);
-	printf("The minimum element is %d\n", test[0]);
+	printf("The minimum element is %d\n", test[SIZE-1]);
 	return 0;
 }
 /* This function will print statistics of an array */
