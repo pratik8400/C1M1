@@ -85,7 +85,7 @@ int find_median(int test[])
    int median = SIZE;  
 
    sorting_of_array(test, SIZE);
-   median = ((median + 1)/2) -1;
+   median = ((median + 1)/2);
    printf("Median is %d\n", test[median]);
     return 0; 
 } 
